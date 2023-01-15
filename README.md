@@ -25,12 +25,12 @@ kubectl get svc -n exam
 kubectl get ingress -n exam
 ```
 # How to use api
-Mapping domain exam.firegroup.com IP loadbalance on ingress-nginx
+Mapping domain exam.firegroup.com to IP loadbalance on ingress-nginx
 Excuting curl command
 ```
 Curl https://exam.firegroup.com/exam
 ```
-The result should be success then repose as below:
+The result should be success then reponse as below:
 ```
 [
   "20230115-1014",
