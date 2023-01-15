@@ -3,15 +3,16 @@ from flask import Flask
 import json
 import time
 import boto3
+import request
 
-asg = "firegroup-exam-autoscalinggroup"
 asg_client = boto3.client('autoscaling')
 ec2_client = boto3.client('ec2')
 
 app = Flask(__name__)
 
-@app.route('/asg')
-def asg():
+@app.route('/exam')
+def exam(request):
+    asg = request.forms.get("asg-name")
     asg_response = asg_client.describe_auto_scaling_groups(AutoScalingGroupNames=[asg])
     instance_ids = []
     for i in asg_response['AutoScalingGroups']:
