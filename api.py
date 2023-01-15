@@ -10,8 +10,8 @@ ec2_client = boto3.client('ec2')
 
 app = Flask(__name__)
 
-@app.route('/exam')
-def exam():
+@app.route('/asg')
+def asg():
     asg_response = asg_client.describe_auto_scaling_groups(AutoScalingGroupNames=[asg])
     instance_ids = []
     for i in asg_response['AutoScalingGroups']:
