@@ -10,6 +10,18 @@ docker tag api-exam:latest registry.firegroup.com/api-exam:latest
 docker push registry.firegroup.com/api-exam:latest
 ```
 
+# Update AWS Credentials
+## Update values.yml in chart directory
+```
+env:
+  AWS_ACCESS_KEY_ID:
+    value: "x.x.x.x"
+  AWS_SECRET_ACCESS_KEY:
+    value: "x.x.x.x"
+  AWS_DEFAULT_REGION:
+    value: "x.x.x.x"
+```
+
 # Deploy Kubernetes
 ## Assuming the ingress-nginx and metallb had been installed in kubernetes cluster
 ```
@@ -27,7 +39,7 @@ kubectl get ingress -n exam
 # How to use api
 Mapping domain exam.firegroup.com to IP loadbalance on ingress-nginx. Excuting curl command
 ```
-Curl https://exam.firegroup.com/asg
+curl https://exam.firegroup.com/asg?asg-name=xxxxxxx
 ```
 The result should be success then reponse as below:
 ```
