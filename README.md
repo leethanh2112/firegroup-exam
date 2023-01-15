@@ -6,8 +6,8 @@ docker build -t api-exam .
 # Push image to registry
 ```
 docker login registry.firegroup.com -u username-xxx -p password-xxx
-docker tag api-exam:latest registry.firegroup.com/api-exam:v1.0
-docker push registry.firegroup.com/api-exam:v1.0
+docker tag api-exam:latest registry.firegroup.com/api-exam:latest
+docker push registry.firegroup.com/api-exam:latest
 ```
 
 # Deploy Kubernetes
