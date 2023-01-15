@@ -32,7 +32,10 @@ Curl https://exam.firegroup.com/exam
 ```
 The result should be success then repose as below:
 ```
-![image](https://user-images.githubusercontent.com/33690376/212535107-a95a93cb-4eea-4307-9a62-0d26727d4e83.png)
+[
+  "20230115-1014",
+  "true"
+]
 ```
 
 
