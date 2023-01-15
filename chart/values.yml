@@ -14,8 +14,6 @@ service:
   containerPort: 5000
   targetPort: 5000
 env:
-  ENABLE_PROFILER:
-    value: "0"
   AWS_ACCESS_KEY_ID:
     value: "x.x.x.x"
   AWS_DEFAULT_REGION:
